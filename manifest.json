@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "copy-tab-link-extension",
-    "description": "Adds an item to a tab's context menu in Firefox to copy the tab's URL to the clipboard.",
+    "name": "Copy Tab Link",
+    "description": "Adds an entry to a tab's context menu to copy the tab's URL to the clipboard.",
     "version": "0.1.0",
 
     "background": {

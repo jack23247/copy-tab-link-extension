@@ -1,5 +1,7 @@
-# copy-tab-link-extension
+# ![extension logo](./artifacts/tab-copy-icon-1.png) copy-tab-link-extension
 
-A simple browser extension that adds an item to a tab's context menu in Firefox to copy the tab's URL to the clipboard.
+A simple browser extension that adds an entry to a tab's context menu in Firefox to copy the tab's URL to the clipboard. This extension makes it easy to share the URL for any open tab, without necessarily needing to open the tab first.
 
-_Note that at this time the extension is not actually available in the Add-Ons store. It also has not been tested on browsers other than Firefox 97 on Windows, though it should be usable anywhere._
+🖥 [**Install the Extension for Firefox**](https://addons.mozilla.org/en-US/firefox/addon/copy-tab-link/)
+
+🖼 _Logo contains graphics derived from [Freepik tab icons on Flaticon](https://www.flaticon.com/free-icon/tabs_1665599)_

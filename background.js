@@ -33,9 +33,25 @@ function copyToClipboard(text) {
   document.execCommand("copy");
 }
 
+function splitUrl(url, sep = "?") {
+  return url.split(sep).at(0);
+}
+
 browser.menus.create({
   id: "copy-tab-url",
-  title: "Copy Tab URL",
+  title: "Complete",
+  contexts: ["tab"]
+}, onCreated);
+
+browser.menus.create({
+  id: "copy-tab-url-no-querystring",
+  title: "Without Querystring",
+  contexts: ["tab"]
+}, onCreated);
+
+browser.menus.create({
+  id: "copy-tab-url-no-fragments",
+  title: "Without Fragments",
   contexts: ["tab"]
 }, onCreated);
 
@@ -43,7 +59,15 @@ browser.menus.create({
  * Click event listener
 */
 browser.menus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === "copy-tab-url") {
-    copyToClipboard(tab.url);
+  switch (info.menuItemId) {
+    case "copy-tab-url":
+      copyToClipboard(tab.url);
+      break;
+    case "copy-tab-url-no-querystring":
+      copyToClipboard(splitUrl(tab.url));
+      break;
+    case "copy-tab-url-no-fragments":
+      copyToClipboard(splitUrl(tab.url, "#"));
+      break;
   }
 });

@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Copy Tab Link",
     "description": "Adds an entry to a tab's context menu to copy the tab's URL to the clipboard.",
-    "version": "0.1.0",
+    "version": "0.1.1",
 
     "background": {
         "scripts": [
